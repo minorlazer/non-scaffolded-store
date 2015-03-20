@@ -21,4 +21,7 @@ Rails.application.routes.draw do
 
   # Destroy
   delete 'products/:id' => 'products#destroy', as: 'destroy_product', id: /\d+/
+
+  # The following single line would build all of our REST-ful routes
+  # resources :products, constraints: { id: /\d+/}
 end
