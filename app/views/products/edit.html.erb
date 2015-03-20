@@ -1,4 +1,4 @@
-<h1>Create New Product</h1>
+<h1>Edit This Product</h1>
 <%= form_for @product do |f| %>
     <% if @product.errors.any? %>
         <p><%= pluralize(@product.errors.size, 'error') %> prevented this product from being saved.</p>
@@ -20,6 +20,6 @@
       <%= f.label :price %>
       <%= f.text_field :price %>
     </p>
-    <%= f.submit "Create Product" %>
+    <%= f.submit "Edit Product" %>
 
 <% end %>

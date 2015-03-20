@@ -1,3 +1,5 @@
+<p><%= link_to 'Home', root_path %></p>
+
 <h2><%= @product.name %></h2>
 
 <div><%= @product.description %></div>
@@ -5,3 +7,6 @@
 <p>
   <strong>Price:</strong> <%= number_to_currency(@product.price) %>
 </p>
+
+<p><%= link_to 'Edit Product', edit_product_path(@product) %></p>
+<p><%= link_to 'Destroy Product', @product, data:{confirm: 'Are you sure you wish to delete?'}, method: :delete %></p>
